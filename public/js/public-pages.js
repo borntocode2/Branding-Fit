@@ -422,6 +422,7 @@ const PUBLIC_PORTFOLIO_ASSETS = {
       "/assets/images/portfolio/atelier-coffee/mockup-5.png",
       "/assets/images/portfolio/atelier-coffee/mockup-3.png",
       "/assets/images/portfolio/atelier-coffee/mockup-2.png",
+      "/assets/images/portfolio/atelier-coffee/mockup-1.png",
     ],
   },
   "oreum-black-pork": {
@@ -657,11 +658,11 @@ const PUBLIC_PORTFOLIO_ASSETS = {
   "aegis-partners": {
     logoImage: "/assets/images/portfolio/aegis-partners/logo.jpeg",
     mockupImages: [
-      "/assets/images/portfolio/aegis-partners/mockup-1.jpeg",
-      "/assets/images/portfolio/aegis-partners/mockup-2.jpeg",
-      "/assets/images/portfolio/aegis-partners/mockup-3.jpeg",
-      "/assets/images/portfolio/aegis-partners/mockup-4.jpeg",
-      "/assets/images/portfolio/aegis-partners/mockup-5.jpeg",
+      "/assets/images/portfolio/aegis-partners/mockup-1.png",
+      "/assets/images/portfolio/aegis-partners/mockup-2.png",
+      "/assets/images/portfolio/aegis-partners/mockup-3.png",
+      "/assets/images/portfolio/aegis-partners/mockup-4.png",
+      "/assets/images/portfolio/aegis-partners/mockup-5.png",
     ],
   },
   muscleart: {
