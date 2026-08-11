@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#06B6D4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#0D0D18" rx="24"/>
+  <g filter="url(#shadow)">
+    <g transform="rotate(45 150 120)">
+            <rect x="95" y="65" width="110" height="110" rx="16" fill="url(#grad)" />
+        </g>
+        <text x="150" y="128" font-family="'Space Grotesk', sans-serif" font-size="46" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">네온</text>
+  </g>
+  <text x="150" y="240" font-family="'Outfit', 'Pretendard', sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">네온테크</text>
+</svg>

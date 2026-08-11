@@ -1,0 +1,40 @@
+# -----------------------------------------------------------------------------
+# Branding Fit - Git Ignore Rules (.gitignore)
+# -----------------------------------------------------------------------------
+
+# 1. Environment Variables & Secret Files (환경 변수 및 보안 인증 파일)
+.env
+.env.local
+.env.development
+.env.production
+client_secret_*.json
+*.pem
+*.key
+*.p12
+
+# 2. Dependency Directories (Node.js 패키지 모듈 디렉토리)
+node_modules/
+jspm_packages/
+
+# 3. Database Files & Logs (SQLite 데이터베이스 및 로그 파일)
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 4. OS & Editor Specific Files (운영체제 및 에디터 설정 파일)
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+.gemini/
+
+# 5. Temporary & Compressed Files (압축 파일 및 기타 인증 스크린샷)
+*.zip
+*.tar.gz
+GitHub Oauth 정보.png

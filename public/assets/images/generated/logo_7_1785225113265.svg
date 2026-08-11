@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B84B1" />
+      <stop offset="100%" stop-color="#E8DBC5" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#5B84B1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#0D0D18" rx="24"/>
+  <g filter="url(#shadow)">
+    <polygon points="150,50 210,90 210,160 150,200 90,160 90,90" fill="url(#grad)" />
+        <text x="150" y="132" font-family="'Space Grotesk', sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">BL</text>
+  </g>
+  <text x="150" y="240" font-family="'Outfit', 'Pretendard', sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Blue Coffee</text>
+</svg>
