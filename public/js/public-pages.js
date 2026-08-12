@@ -1426,3 +1426,39 @@ function showRequestErrors(form, errors) {
     });
   }
 }
+
+// 메인 페이지 히어로 섹션에서 [디자인 시작] 클릭 시 '기타' 입력값 세션 저장
+document.addEventListener("DOMContentLoaded", () => {
+  const heroStartBtn = document.querySelector(
+    "#hero-start-btn, .btn-start, #btn-start-design",
+  );
+
+  if (heroStartBtn) {
+    heroStartBtn.addEventListener("click", () => {
+      // 메인 히어로 섹션의 업종 선택 및 직접 입력창 요소 가져오기
+      const heroSelect =
+        document.getElementById("hero-industry-select") ||
+        document.getElementById("hero-category-select") ||
+        document.querySelector(".hero-section select");
+      const heroCustomInput =
+        document.getElementById("hero-industry-custom") ||
+        document.getElementById("hero-category-custom") ||
+        document.querySelector('.hero-section input[type="text"]');
+
+      if (heroSelect) {
+        const selectedVal = heroSelect.value;
+
+        if (selectedVal === "기타" || selectedVal === "custom") {
+          const customText = heroCustomInput
+            ? heroCustomInput.value.trim()
+            : "";
+          sessionStorage.setItem("branding_fit_selected_category", "기타");
+          sessionStorage.setItem("branding_fit_custom_category", customText);
+        } else {
+          sessionStorage.setItem("branding_fit_selected_category", selectedVal);
+          sessionStorage.removeItem("branding_fit_custom_category");
+        }
+      }
+    });
+  }
+});

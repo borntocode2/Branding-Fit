@@ -2384,24 +2384,44 @@
         }
 
         function saveDraftAndOpenWorkspace() {
-          const brandInput = document.getElementById("brandInput");
-          const brandName = brandInput ? brandInput.value.trim() : "";
-          const industry = getSelectedIndustry();
-          const keywords = getKeywords();
+  const brandInput = document.getElementById("brandInput");
+  const brandName = brandInput ? brandInput.value.trim() : "";
+  
+  // 📍 1. 드롭다운 선택값 및 기타 직접입력 텍스트 가져오기
+  const selectedTextEl = document.getElementById("selectedIndustryText");
+  const selectedText = selectedTextEl ? selectedTextEl.textContent.trim() : "";
+  const customIndustryInput = document.getElementById("customIndustryInput");
+  const customVal = customIndustryInput ? customIndustryInput.value.trim() : "";
+  
+  let industry = selectedText;
+  let customCategory = "";
 
-          try {
-            parentWindow.localStorage.setItem(
-              "branding_fit_home_draft",
-              JSON.stringify({
-                brandName,
-                industry,
-                keywords,
-              }),
-            );
-          } catch (e) {}
+  // 📍 2. '기타' 선택 시 세션 저장을 위한 처리
+  if (selectedText === "기타") {
+    customCategory = customVal; // 직접 입력한 문구 (예: "특수 제작")
+    sessionStorage.setItem("branding_fit_selected_category", "기타");
+    sessionStorage.setItem("branding_fit_custom_category", customVal);
+  } else if (selectedText && selectedText !== "업종") {
+    sessionStorage.setItem("branding_fit_selected_category", selectedText);
+    sessionStorage.removeItem("branding_fit_custom_category");
+  }
 
-          navigate("#/workspace");
-        }
+  const keywords = getKeywords();
+
+  // 📍 3. 기존 로컬스토리지 드래프트 저장 유지
+  try {
+    parentWindow.localStorage.setItem(
+      "branding_fit_home_draft",
+      JSON.stringify({
+        brandName,
+        industry: selectedText === "기타" && customVal ? customVal : industry,
+        keywords,
+      }),
+    );
+  } catch (e) {}
+
+  navigate("#/workspace");
+}
 
         function openPortfolioPage() {
           navigate("#/portfolio");

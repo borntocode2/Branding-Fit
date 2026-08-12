@@ -1030,24 +1030,28 @@ document.addEventListener("DOMContentLoaded", () => {
   initIndustryCustomSync();
 });
 
+// public/js/workspace.js
+
+// 1. 업종 '기타' 선택 및 메인 세션 데이터 1회용 복원 후 삭제
 function initIndustryCustomSync() {
   const industrySelect = document.getElementById("input-industry");
   const industryCustomInput = document.getElementById("input-industry-custom");
 
   if (!industrySelect || !industryCustomInput) return;
 
-  // 1. 선택 상자 변경 이벤트 ('기타' 선택 시 입력창 보이기)
-  industrySelect.addEventListener("change", () => {
-    if (industrySelect.value === "기타") {
-      industryCustomInput.style.display = "block";
-      industryCustomInput.focus();
-    } else {
-      industryCustomInput.style.display = "none";
-      industryCustomInput.value = "";
-    }
-  });
+  if (!industrySelect.dataset.syncBound) {
+    industrySelect.addEventListener("change", () => {
+      if (industrySelect.value === "기타") {
+        industryCustomInput.style.display = "block";
+        industryCustomInput.focus();
+      } else {
+        industryCustomInput.style.display = "none";
+        industryCustomInput.value = "";
+      }
+    });
+    industrySelect.dataset.syncBound = "true";
+  }
 
-  // 2. 메인 페이지에서 넘어왔을 때 저장된 세션 데이터 복원
   const savedCategory = sessionStorage.getItem(
     "branding_fit_selected_category",
   );
@@ -1055,16 +1059,81 @@ function initIndustryCustomSync() {
     "branding_fit_custom_category",
   );
 
-  if (savedCategory === "기타" || savedCustomCategory) {
-    industrySelect.value = "기타";
-    industryCustomInput.style.display = "block";
-    if (savedCustomCategory) {
-      industryCustomInput.value = savedCustomCategory;
+  if (savedCategory || savedCustomCategory) {
+    if (savedCategory === "기타" || savedCustomCategory) {
+      industrySelect.value = "기타";
+      industryCustomInput.style.display = "block";
+      if (savedCustomCategory) {
+        industryCustomInput.value = savedCustomCategory;
+      }
+    } else if (savedCategory) {
+      industrySelect.value = savedCategory;
+      industryCustomInput.style.display = "none";
     }
-  } else if (savedCategory) {
-    industrySelect.value = savedCategory;
-    industryCustomInput.style.display = "none";
+
+    // 📍 사용 후 즉시 삭제 (새로고침 시 남지 않도록)
+    sessionStorage.removeItem("branding_fit_selected_category");
+    sessionStorage.removeItem("branding_fit_custom_category");
   }
+}
+
+// 2. 브랜드명, 키워드 등 메인 드래프트 데이터 1회용 복원 후 삭제
+function loadHomeDraftAndClear() {
+  try {
+    const rawData = localStorage.getItem("branding_fit_home_draft");
+    if (!rawData) return;
+
+    const draft = JSON.parse(rawData);
+
+    // 브랜드 이름 입력
+    const brandNameInput = document.getElementById("input-brand-name");
+    if (brandNameInput && draft.brandName) {
+      brandNameInput.value = draft.brandName;
+    }
+
+    // 키워드 태그 입력 (기존 함수가 있을 경우)
+    if (
+      Array.isArray(draft.keywords) &&
+      typeof window.addKeywordTag === "function"
+    ) {
+      draft.keywords.forEach((kw) => window.addKeywordTag(kw));
+    }
+
+    // 📍 사용 후 즉시 삭제 (새로고침 시 남지 않도록)
+    localStorage.removeItem("branding_fit_home_draft");
+  } catch (e) {
+    console.warn("Home draft restore error:", e);
+  }
+}
+
+// 페이지 로드 및 해시 변경 시 실행
+document.addEventListener("DOMContentLoaded", () => {
+  initIndustryCustomSync();
+  loadHomeDraftAndClear();
+});
+
+window.addEventListener("hashchange", () => {
+  if (window.location.hash === "#/workspace") {
+    initIndustryCustomSync();
+    loadHomeDraftAndClear();
+  }
+});
+
+// 2. 메인 페이지에서 넘어왔을 때 저장된 세션 데이터 복원
+const savedCategory = sessionStorage.getItem("branding_fit_selected_category");
+const savedCustomCategory = sessionStorage.getItem(
+  "branding_fit_custom_category",
+);
+
+if (savedCategory === "기타" || savedCustomCategory) {
+  industrySelect.value = "기타";
+  industryCustomInput.style.display = "block";
+  if (savedCustomCategory) {
+    industryCustomInput.value = savedCustomCategory;
+  }
+} else if (savedCategory) {
+  industrySelect.value = savedCategory;
+  industryCustomInput.style.display = "none";
 }
 
 // 라우팅/해시 이동 시에도 실행되도록 설정
