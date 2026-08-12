@@ -5218,3 +5218,19 @@ footer,
   pointer-events: auto !important;
   transform: translateY(0) !important;
 }
+
+/* 개인정보 동의 라벨 및 체크박스 수평 수직 중앙 정렬 */
+.request-checkbox {
+  display: inline-flex !important;
+  align-items: center !important; /* 📍 세로 중앙 정렬 */
+  gap: 8px !important; /* 텍스트와 체크박스 사이 간격 */
+  vertical-align: middle !important;
+}
+
+/* 체크박스 위치 미세 정렬 */
+#request-privacy {
+  margin: 0 !important;
+  position: relative !important;
+  top: 2px !important; /* 📍 수평 위치 맞춤 (필요시 0px~2px 사이 조정) */
+  cursor: pointer;
+}

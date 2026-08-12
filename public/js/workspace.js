@@ -1077,7 +1077,8 @@ function initIndustryCustomSync() {
   }
 }
 
-// 2. 브랜드명, 키워드 등 메인 드래프트 데이터 1회용 복원 후 삭제
+// public/js/workspace.js 내 loadHomeDraftAndClear 함수 교체
+
 function loadHomeDraftAndClear() {
   try {
     const rawData = localStorage.getItem("branding_fit_home_draft");
@@ -1085,21 +1086,37 @@ function loadHomeDraftAndClear() {
 
     const draft = JSON.parse(rawData);
 
-    // 브랜드 이름 입력
+    // 1. 브랜드 이름 복원
     const brandNameInput = document.getElementById("input-brand-name");
     if (brandNameInput && draft.brandName) {
       brandNameInput.value = draft.brandName;
     }
 
-    // 키워드 태그 입력 (기존 함수가 있을 경우)
-    if (
-      Array.isArray(draft.keywords) &&
-      typeof window.addKeywordTag === "function"
-    ) {
-      draft.keywords.forEach((kw) => window.addKeywordTag(kw));
+    // 2. 📍 키워드 복원 및 기존 디자인/이벤트 동일 적용
+    if (Array.isArray(draft.keywords) && draft.keywords.length > 0) {
+      const keywordInput = document.getElementById("input-keyword");
+
+      draft.keywords.forEach((kw) => {
+        // 프로젝트의 기존 전역 태그 추가 함수가 있는 경우 우선 실행
+        if (typeof window.addKeywordTag === "function") {
+          window.addKeywordTag(kw);
+        } else if (typeof window.addKeywordChip === "function") {
+          window.addKeywordChip(kw);
+        } else if (keywordInput) {
+          // input 요소에 값을 넣고 Enter 키 이벤트를 강제로 발생시켜 기존 디자인/스크립트 로직을 그대로 타도록 처리
+          keywordInput.value = kw;
+          const enterEvent = new KeyboardEvent("keydown", {
+            key: "Enter",
+            keyCode: 13,
+            which: 13,
+            bubbles: true,
+          });
+          keywordInput.dispatchEvent(enterEvent);
+        }
+      });
     }
 
-    // 📍 사용 후 즉시 삭제 (새로고침 시 남지 않도록)
+    // 3. 사용 후 로컬스토리지 즉시 삭제 (새로고침 시 깨끗하게 초기화)
     localStorage.removeItem("branding_fit_home_draft");
   } catch (e) {
     console.warn("Home draft restore error:", e);
