@@ -973,3 +973,101 @@ function initWorkspace() {
     }
   }
 }
+
+// 디자인 시작 페이지 - 기타 업종 선택 및 메인 페이지 입력값 연동 로직
+document.addEventListener("DOMContentLoaded", () => {
+  initCategoryCustomSync();
+});
+
+function initCategoryCustomSync() {
+  const categorySelect = document.getElementById("workspace-category");
+  const categoryCustomInput = document.getElementById(
+    "workspace-category-custom",
+  );
+
+  if (!categorySelect || !categoryCustomInput) return;
+
+  // 1. 사용자가 드롭다운에서 '기타'를 직접 선택하거나 변경할 때 이벤트
+  categorySelect.addEventListener("change", () => {
+    if (categorySelect.value === "기타" || categorySelect.value === "custom") {
+      categoryCustomInput.style.display = "block";
+      categoryCustomInput.focus();
+    } else {
+      categoryCustomInput.style.display = "none";
+      categoryCustomInput.value = "";
+    }
+  });
+
+  // 2. 메인 페이지에서 넘어왔을 때 sessionStorage에 저장된 값 복원 처리
+  const savedCategory = sessionStorage.getItem(
+    "branding_fit_selected_category",
+  );
+  const savedCustomCategory = sessionStorage.getItem(
+    "branding_fit_custom_category",
+  );
+
+  if (savedCategory === "기타" || savedCustomCategory) {
+    categorySelect.value = "기타";
+    categoryCustomInput.style.display = "block";
+    if (savedCustomCategory) {
+      categoryCustomInput.value = savedCustomCategory;
+    }
+  } else if (savedCategory) {
+    categorySelect.value = savedCategory;
+    categoryCustomInput.style.display = "none";
+  }
+}
+
+// 싱글 페이지(SPA/해시 변경) 구조 지원: 페이지 이동 시에도 실행되도록 설정
+window.addEventListener("hashchange", () => {
+  setTimeout(initCategoryCustomSync, 100);
+});
+
+// ==========================================
+// 업종 '기타' 선택 시 입력창 토글 및 메인 세션 연동
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  initIndustryCustomSync();
+});
+
+function initIndustryCustomSync() {
+  const industrySelect = document.getElementById("input-industry");
+  const industryCustomInput = document.getElementById("input-industry-custom");
+
+  if (!industrySelect || !industryCustomInput) return;
+
+  // 1. 선택 상자 변경 이벤트 ('기타' 선택 시 입력창 보이기)
+  industrySelect.addEventListener("change", () => {
+    if (industrySelect.value === "기타") {
+      industryCustomInput.style.display = "block";
+      industryCustomInput.focus();
+    } else {
+      industryCustomInput.style.display = "none";
+      industryCustomInput.value = "";
+    }
+  });
+
+  // 2. 메인 페이지에서 넘어왔을 때 저장된 세션 데이터 복원
+  const savedCategory = sessionStorage.getItem(
+    "branding_fit_selected_category",
+  );
+  const savedCustomCategory = sessionStorage.getItem(
+    "branding_fit_custom_category",
+  );
+
+  if (savedCategory === "기타" || savedCustomCategory) {
+    industrySelect.value = "기타";
+    industryCustomInput.style.display = "block";
+    if (savedCustomCategory) {
+      industryCustomInput.value = savedCustomCategory;
+    }
+  } else if (savedCategory) {
+    industrySelect.value = savedCategory;
+    industryCustomInput.style.display = "none";
+  }
+}
+
+// 라우팅/해시 이동 시에도 실행되도록 설정
+window.addEventListener("hashchange", () => {
+  setTimeout(initIndustryCustomSync, 100);
+});

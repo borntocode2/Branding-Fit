@@ -2507,5 +2507,30 @@
         window.brandingFitBridge.init();
       });
     </script>
+    <!-- public/home.html 맨 아래쪽 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const startBtn = document.getElementById('btn-start-design'); // 실제 디자인 시작하기 버튼 ID
+    const categorySelect = document.getElementById('hero-category-select'); // 업종 드롭다운 ID
+    const categoryCustomInput = document.getElementById('hero-category-custom'); // 기타 직접입력 input ID
+
+    if (startBtn) {
+      startBtn.addEventListener('click', () => {
+        let selectedCategory = categorySelect ? categorySelect.value : '';
+
+        // 기타를 선택했거나 직접 입력창이 활성화된 경우
+        if (selectedCategory === '기타' || selectedCategory === 'custom') {
+          const customVal = categoryCustomInput ? categoryCustomInput.value.trim() : '기타';
+          sessionStorage.setItem('branding_fit_custom_category', customVal);
+          sessionStorage.setItem('branding_fit_selected_category', '기타');
+        } else {
+          sessionStorage.setItem('branding_fit_selected_category', selectedCategory);
+          sessionStorage.removeItem('branding_fit_custom_category');
+        }
+      });
+    }
+  });
+</script>
+</body>
   </body>
 </html>
