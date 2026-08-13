@@ -5234,3 +5234,18 @@ footer,
   top: 2px !important; /* 📍 수평 위치 맞춤 (필요시 0px~2px 사이 조정) */
   cursor: pointer;
 }
+
+/* 포트폴리오 페이지 상단 'Portfolio' 제목 오른쪽 이동 */
+.portfolio-title-block h1,
+.portfolio-page-shell .portfolio-title-block {
+  margin-left: 18px !important; /* 📍 원하시는 만큼 숫자를 늘려주세요 (예: 20px, 40px, 60px 등) */
+}
+
+/* PC 화면(너비 901px 이상)에서만 로그아웃/회원탈퇴 버튼 위로 이동 */
+@media (min-width: 901px) {
+  #btn-mypage-logout,
+  #btn-mypage-withdraw {
+    position: relative !important;
+    top: -20px !important; /* 📍 PC에서 올리고 싶은 만큼 수치 조절 (-10px ~ -30px) */
+  }
+}
