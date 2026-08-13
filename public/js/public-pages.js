@@ -864,7 +864,16 @@ function initPortfolioModal() {
         const target = document.querySelector(anchor.getAttribute("href"));
         const scroller = document.getElementById("portfolio-detail-scroll");
         if (target && scroller) {
-          scroller.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+          // 📍 상단 여백(Offset) 수치 조정
+          // 수치가 커질수록 타겟 이미지가 아래로 내려와서 상단이 잘리지 않고 넓게 보입니다.
+          const headerOffset = 115; // 기존 수치(보통 0~40px)를 80~120px 정도의 여유 있는 수치로 변경
+          const elementPosition = target.offsetTop;
+          const offsetPosition = elementPosition - headerOffset;
+
+          scroller.scrollTo({
+            top: Math.max(0, offsetPosition),
+            behavior: "smooth",
+          });
         }
       });
     });
