@@ -246,11 +246,9 @@ p {
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    var(--bg-main) 0%,
-    var(--bg-surface) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--bg-main) 0%,
+      var(--bg-surface) 100%);
 }
 
 .section-title {
@@ -314,26 +312,31 @@ p {
     linear-gradient(135deg, #100f1c, #0a0a0f),
     radial-gradient(circle at 80% 20%, var(--primary-03) 0%, transparent 60%);
 }
+
 .mockup-cosmetics {
   background:
     linear-gradient(135deg, #180d19, #080509),
     radial-gradient(circle at 20% 80%, var(--accent-pink) 0%, transparent 60%);
 }
+
 .mockup-apparel {
   background:
     linear-gradient(135deg, #120e24, #080612),
     radial-gradient(circle at 50% 50%, var(--primary-01) 0%, transparent 70%);
 }
+
 .mockup-bakery {
   background:
     linear-gradient(135deg, #201a15, #0d0a08),
     radial-gradient(circle at 80% 80%, #d97706 0%, transparent 50%);
 }
+
 .mockup-wellness {
   background:
     linear-gradient(135deg, #0d1a1b, #050a0a),
     radial-gradient(circle at 20% 20%, var(--success) 0%, transparent 65%);
 }
+
 .mockup-juice {
   background:
     linear-gradient(135deg, #22150d, #0b0704),
@@ -382,30 +385,35 @@ p {
     var(--glow-cyan),
     0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
 .mockup-logo-circle.neon-pink {
   border-color: var(--accent-pink);
   box-shadow:
     0 0 15px rgba(255, 0, 122, 0.4),
     0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
 .mockup-logo-circle.neon-violet {
   border-color: var(--primary-01);
   box-shadow:
     var(--glow-violet),
     0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
 .mockup-logo-circle.warm-brown {
   border-color: #d97706;
   box-shadow:
     0 0 15px rgba(217, 119, 6, 0.4),
     0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
 .mockup-logo-circle.neon-green {
   border-color: var(--success);
   box-shadow:
     0 0 15px rgba(16, 185, 129, 0.4),
     0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
 .mockup-logo-circle.warm-orange {
   border-color: #ea580c;
   box-shadow:
@@ -511,12 +519,10 @@ p {
   font-family: var(--font-title);
   font-size: 3.2rem;
   font-weight: 800;
-  background: linear-gradient(
-    135deg,
-    var(--primary-03),
-    var(--primary-01),
-    var(--accent-pink)
-  );
+  background: linear-gradient(135deg,
+      var(--primary-03),
+      var(--primary-01),
+      var(--accent-pink));
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -530,6 +536,7 @@ p {
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }
@@ -554,15 +561,18 @@ p {
 
 /* Responsive Styles for Steps */
 @media (max-width: 768px) {
+
   .step-card,
   .step-card.reverse {
     flex-direction: column;
     gap: 2rem;
     text-align: center;
   }
+
   .step-visual {
     max-width: 100%;
   }
+
   h1 {
     font-size: 2.25rem;
   }
@@ -774,12 +784,10 @@ footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(5, 8, 13, 0.34),
-    rgba(5, 8, 13, 0.1) 46%,
-    rgba(10, 10, 12, 0.42)
-  );
+  background: linear-gradient(90deg,
+      rgba(5, 8, 13, 0.34),
+      rgba(5, 8, 13, 0.1) 46%,
+      rgba(10, 10, 12, 0.42));
   pointer-events: none;
 }
 
@@ -851,7 +859,7 @@ footer {
   -webkit-backdrop-filter: blur(12px);
 }
 
-.login-modal-panel > * {
+.login-modal-panel>* {
   position: relative;
   z-index: 1;
 }
@@ -1117,6 +1125,7 @@ footer {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1128,11 +1137,9 @@ footer {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: linear-gradient(
-    135deg,
-    var(--text-primary),
-    var(--text-secondary)
-  );
+  background: linear-gradient(135deg,
+      var(--text-primary),
+      var(--text-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1196,7 +1203,7 @@ select.form-control {
 
 /* 네이티브 드롭다운 옵션 스타일 */
 select.form-control option {
-  background-color: #1a1a2e;
+  background-color: #1a1a1a;
   color: #e0e0e0;
   padding: 8px 12px;
   font-size: 0.9rem;
@@ -1204,7 +1211,7 @@ select.form-control option {
 
 select.form-control option:hover,
 select.form-control option:checked {
-  background-color: #6366f1;
+  background-color: #4F46E5;
   color: #ffffff;
 }
 
@@ -1241,11 +1248,9 @@ select.form-control optgroup {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.2),
-    rgba(139, 92, 246, 0.2)
-  );
+  background: linear-gradient(135deg,
+      rgba(99, 102, 241, 0.2),
+      rgba(139, 92, 246, 0.2));
   border: 1px solid rgba(139, 92, 246, 0.3);
   padding: 0.3rem 0.7rem;
   border-radius: 100px;
@@ -1282,7 +1287,7 @@ select.form-control optgroup {
 }
 
 .btn-form.btn-submit {
-  background: linear-gradient(135deg, var(--primary-01), var(--primary-03));
+  background: linear-gradient(135deg, var(--primary-01) 20%, var(--primary-03));
   color: white;
   box-shadow: var(--glow-violet);
 }
@@ -1573,11 +1578,9 @@ select.form-control optgroup {
 
 .chatbot-header {
   padding: 1rem 1.2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.15),
-    rgba(79, 70, 229, 0.15)
-  );
+  background: linear-gradient(135deg,
+      rgba(99, 102, 241, 0.15),
+      rgba(79, 70, 229, 0.15));
   border-bottom: 1px solid var(--border-glass);
   display: flex;
   justify-content: space-between;
@@ -1655,6 +1658,7 @@ select.form-control optgroup {
     opacity: 0;
     transform: scale(0.9) translateY(5px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -1756,15 +1760,18 @@ select.form-control optgroup {
 .typing-dot:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .typing-dot:nth-child(3) {
   animation-delay: 0.4s;
 }
 
 @keyframes typingPulse {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-4px);
   }
@@ -2040,6 +2047,7 @@ select.form-control optgroup {
   .gnb {
     padding: 1rem 2rem;
   }
+
   .mobile-menu-btn {
     display: none !important;
   }
@@ -2050,9 +2058,11 @@ select.form-control optgroup {
   .gnb {
     padding: 1rem 1.5rem;
   }
+
   .mobile-menu-btn {
     display: none !important;
   }
+
   .nav-menu {
     gap: 28px;
   }
@@ -2064,21 +2074,26 @@ select.form-control optgroup {
   .nav-auth {
     gap: 14px;
   }
+
   .hero-container {
     height: 75vh;
     padding: 1.5rem;
   }
+
   h1 {
     font-size: 2.75rem;
   }
+
   .form-grid {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
   }
+
   .result-grid {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
   }
+
   .mockup-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
@@ -2095,7 +2110,7 @@ select.form-control optgroup {
     grid-template-columns: 1fr;
   }
 
-  .legal-table > div {
+  .legal-table>div {
     grid-template-columns: 1fr;
     gap: 8px;
   }
@@ -2103,9 +2118,11 @@ select.form-control optgroup {
   .gnb {
     padding: 0.8rem 1.2rem;
   }
+
   .mobile-menu-btn {
     display: flex;
   }
+
   .nav-menu {
     position: fixed;
     top: 60px;
@@ -2134,61 +2151,76 @@ select.form-control optgroup {
   .nav-auth a {
     text-align: center;
   }
+
   .nav-menu.mobile-open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
+
   .hero-container {
     height: 80vh;
     padding: 1rem;
   }
+
   h1 {
     font-size: 2.1rem;
     line-height: 1.3;
   }
+
   #hero-subtitle {
     font-size: 1rem;
     margin-bottom: 1.8rem;
   }
+
   .portfolio-container {
     padding: 4rem 1rem;
   }
+
   .workspace-container {
     padding: 2rem 1rem 5rem;
   }
+
   .workspace-card {
     padding: 1.5rem;
   }
+
   .form-grid {
     grid-template-columns: 1fr;
   }
+
   .result-grid {
     grid-template-columns: 1fr;
   }
+
   .mockup-grid {
     grid-template-columns: 1fr;
   }
+
   .logo-preview-card {
     width: 100%;
     max-width: 100%;
   }
+
   .logo-image-frame {
     width: 100%;
     max-height: 220px;
   }
+
   .chatbot-btn {
     bottom: 5.8rem;
     right: 1rem;
     width: 52px;
     height: 52px;
   }
+
   .chatbot-window {
     right: 1rem;
     bottom: 9.3rem;
     width: calc(100vw - 2rem);
     height: 420px;
   }
+
   .scroll-top-btn {
     bottom: 1.5rem;
     right: 1rem;
@@ -2202,8 +2234,8 @@ body.home-route {
   display: block;
 }
 
-body.home-route > header,
-body.home-route > #app-footer {
+body.home-route>header,
+body.home-route>#app-footer {
   display: none;
 }
 
@@ -2243,7 +2275,7 @@ body.mypage-route {
   background: #121212;
 }
 
-body.mypage-route > header {
+body.mypage-route>header {
   background: transparent !important;
   border-bottom: 0;
   box-shadow: none;
@@ -2251,7 +2283,7 @@ body.mypage-route > header {
   -webkit-backdrop-filter: none;
 }
 
-body:not(.home-route) > header {
+body:not(.home-route)>header {
   position: fixed;
   top: 0;
   left: 0;
@@ -2509,16 +2541,12 @@ body:not(.home-route) .btn-start.active:hover {
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(
-      circle at 28% 22%,
+    radial-gradient(circle at 28% 22%,
       color-mix(in srgb, var(--tile-accent) 16%, transparent),
-      transparent 34%
-    ),
-    linear-gradient(
-      135deg,
+      transparent 34%),
+    linear-gradient(135deg,
       var(--tile-bg),
-      color-mix(in srgb, var(--tile-bg) 84%, #ffffff)
-    );
+      color-mix(in srgb, var(--tile-bg) 84%, #ffffff));
   transition:
     transform 0.25s ease,
     filter 0.25s ease;
@@ -2586,11 +2614,9 @@ body.portfolio-modal-open {
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr);
   grid-template-rows: 120px minmax(0, 1fr);
-  background: linear-gradient(
-    135deg,
-    rgba(72, 70, 68, 0.58),
-    rgba(45, 43, 42, 0.42)
-  );
+  background: linear-gradient(135deg,
+      rgba(72, 70, 68, 0.58),
+      rgba(45, 43, 42, 0.42));
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-bottom: 0;
   border-radius: 28px 28px 0 0;
@@ -2935,7 +2961,7 @@ body.portfolio-modal-open {
   color: rgba(255, 255, 255, 0.88);
 }
 
-.brand-detail-portfolio-modal .portfolio-story-panel > p:first-child {
+.brand-detail-portfolio-modal .portfolio-story-panel>p:first-child {
   margin: 0 0 18px;
   color: rgba(188, 182, 255, 0.94);
   font-size: 15px;
@@ -3744,7 +3770,7 @@ body.portfolio-modal-open {
 }
 
 @media (max-width: 767px) {
-  body:not(.home-route) > header {
+  body:not(.home-route)>header {
     height: 64px;
   }
 
@@ -3888,7 +3914,7 @@ body.portfolio-modal-open {
   letter-spacing: 0;
 }
 
-.legal-hero > p:not(.public-eyebrow) {
+.legal-hero>p:not(.public-eyebrow) {
   max-width: 760px;
   color: rgba(255, 255, 255, 0.72);
   font-size: clamp(17px, 1.5vw, 22px);
@@ -3981,7 +4007,7 @@ body.portfolio-modal-open {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.legal-table > div {
+.legal-table>div {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
   gap: 24px;
@@ -4045,20 +4071,16 @@ body.portfolio-modal-open {
   display: grid;
   place-items: center;
   background:
-    linear-gradient(
-      45deg,
+    linear-gradient(45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%
-    ),
-    linear-gradient(
-      45deg,
+      rgba(255, 255, 255, 0.9) 75%),
+    linear-gradient(45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%
-    ),
+      rgba(255, 255, 255, 0.9) 75%),
     #e8e8e8;
   background-position:
     0 0,
@@ -4339,11 +4361,9 @@ body.portfolio-modal-open {
 .mypage-divider {
   height: 2px;
   margin: 48px 0 58px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.86),
-    rgba(255, 255, 255, 0.08)
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.86),
+      rgba(255, 255, 255, 0.08));
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -4383,14 +4403,14 @@ body.portfolio-modal-open {
 
 /* 의뢰내역 카드를 '생성된 브랜드' 카드 스타일(#181826 톤)로 통일 */
 .mypage-request-card {
-  border: 1px solid var(--border-glass); /* 유리 질감 테두리 */
+  border: 1px solid var(--border-glass);
+  /* 유리 질감 테두리 */
   border-radius: 16px;
-  background: rgba(
-    18,
-    18,
-    30,
-    0.6
-  ); /* 생성된 브랜드 카드와 동일한 어두운 배경톤 */
+  background: rgba(18,
+      18,
+      30,
+      0.6);
+  /* 생성된 브랜드 카드와 동일한 어두운 배경톤 */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   padding: 28px 32px;
   transition:
@@ -4411,12 +4431,11 @@ body.portfolio-modal-open {
   overflow-y: auto;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.25
-  ); /* 어두운 카드 안쪽에 대화상자처럼 묻어나는 투명 어둠 처리 */
+  background: rgba(0,
+      0,
+      0,
+      0.25);
+  /* 어두운 카드 안쪽에 대화상자처럼 묻어나는 투명 어둠 처리 */
   padding: 18px;
   color: var(--text-primary);
   line-height: 1.6;
@@ -4448,20 +4467,16 @@ body.portfolio-modal-open {
   height: 96px;
   border-radius: 12px;
   background:
-    linear-gradient(
-      45deg,
+    linear-gradient(45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%
-    ),
-    linear-gradient(
-      45deg,
+      rgba(255, 255, 255, 0.9) 75%),
+    linear-gradient(45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%
-    ),
+      rgba(255, 255, 255, 0.9) 75%),
     #e9e9e9;
   background-position:
     0 0,
@@ -4531,13 +4546,15 @@ body.portfolio-modal-open {
 }
 
 .mypage-request-footer a {
-  color: rgba(255, 255, 255, 0.52); /* 흰색으로 지정 (보라색 제거) */
+  color: rgba(255, 255, 255, 0.52);
+  /* 흰색으로 지정 (보라색 제거) */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .mypage-request-footer a:hover {
-  color: #ffffff; /* 마우스 올렸을 때 강조할 색상 (필요시 수정) */
+  color: #ffffff;
+  /* 마우스 올렸을 때 강조할 색상 (필요시 수정) */
   text-decoration: underline;
 }
 
@@ -4597,12 +4614,10 @@ body.portfolio-modal-open {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      circle at 50% 50%,
+    radial-gradient(circle at 50% 50%,
       rgba(236, 72, 153, 0.18) 0%,
       rgba(79, 70, 229, 0.16) 45%,
-      transparent 78%
-    ),
+      transparent 78%),
     rgba(10, 10, 12, 0.38);
 }
 
@@ -4675,6 +4690,7 @@ body.portfolio-modal-open {
 }
 
 @media (max-width: 640px) {
+
   .mypage-avatar,
   .mypage-avatar-wrap {
     width: 128px;
@@ -4800,7 +4816,7 @@ body.legal-route {
   background: #0a0a0a;
 }
 
-body.legal-route > header {
+body.legal-route>header {
   position: static;
   height: 80px;
   background: #0a0a0a;
@@ -4826,7 +4842,7 @@ body.legal-route .gnb {
 }
 
 @media (max-width: 767px) {
-  body.legal-route > header {
+  body.legal-route>header {
     height: 64px;
   }
 
@@ -4840,7 +4856,7 @@ body.legal-route .gnb {
 }
 
 /* Final legal-page overrides: break global header rules and keep the rail in the document flow. */
-body.legal-route:not(.home-route) > header {
+body.legal-route:not(.home-route)>header {
   position: relative;
   top: auto;
   left: auto;
@@ -4902,7 +4918,7 @@ body.legal-route .legal-shell {
 }
 
 @media (max-width: 767px) {
-  body.legal-route:not(.home-route) > header {
+  body.legal-route:not(.home-route)>header {
     height: 64px;
   }
 
@@ -4936,11 +4952,13 @@ footer,
   flex-direction: column;
   justify-content: space-between;
 }
+
 .footer-logo {
   font-size: 26px;
   font-weight: 700;
   color: #fff;
 }
+
 .footer-info {
   font-size: 12px;
   color: #666;
@@ -4951,23 +4969,27 @@ footer,
   display: flex;
   gap: 100px;
 }
+
 .footer-menu-col h4 {
   font-size: 15px;
   margin-bottom: 24px;
   color: #fff;
 }
+
 .footer-menu-col ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+
 .footer-menu-col ul li a {
   font-size: 14px;
   color: #888;
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .footer-menu-col ul li a:hover {
   color: #fff;
 }
@@ -4979,30 +5001,37 @@ footer,
   font-size: 14px;
   color: #888;
 }
+
 .footer-contact span {
   color: #fff;
 }
 
 /* 모바일/태블릿 반응형 */
 @media (max-width: 900px) {
+
   footer,
   #app-footer {
     min-height: auto;
   }
+
   .footer-right {
     flex-wrap: wrap;
     gap: 48px;
   }
 }
+
 @media (max-width: 640px) {
+
   footer,
   #app-footer {
     flex-direction: column;
     padding: 64px 24px;
   }
+
   .footer-left {
     gap: 48px;
   }
+
   .footer-right {
     flex-direction: column;
     gap: 36px;
@@ -5013,7 +5042,8 @@ footer,
 #app-footer,
 .site-footer {
   width: 100%;
-  min-height: 400px; /* 적절한 푸터 높이 유지 */
+  min-height: 400px;
+  /* 적절한 푸터 높이 유지 */
   background-color: #0a0a0a;
   display: flex;
   justify-content: space-between;
@@ -5113,7 +5143,8 @@ footer,
   font-size: 14px;
   color: #888888;
   font-style: normal;
-  text-align: left !important; /* 이미지 2에서 중앙 정렬되던 문제 해결 */
+  text-align: left !important;
+  /* 이미지 2에서 중앙 정렬되던 문제 해결 */
 }
 
 .footer-contact div,
@@ -5129,11 +5160,13 @@ footer,
 
 /* 반응형 모바일 예외 처리 */
 @media (max-width: 1024px) {
+
   footer,
   #app-footer,
   .site-footer {
     padding: 60px 40px;
   }
+
   .footer-right,
   .site-footer-links {
     gap: 40px;
@@ -5141,6 +5174,7 @@ footer,
 }
 
 @media (max-width: 768px) {
+
   footer,
   #app-footer,
   .site-footer {
@@ -5148,6 +5182,7 @@ footer,
     gap: 48px;
     padding: 48px 24px;
   }
+
   .footer-right,
   .site-footer-links {
     flex-direction: column;
@@ -5166,22 +5201,25 @@ footer,
 .portfolio-list-card::before {
   content: "";
   position: absolute;
-  inset: 0; /* top: 0, right: 0, bottom: 0, left: 0 전체 채움 */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* 평소에 덮일 검은색 반투명 정도 (숫자가 클수록 어두워짐) */
+  inset: 0;
+  /* top: 0, right: 0, bottom: 0, left: 0 전체 채움 */
+  background-color: rgba(0,
+      0,
+      0,
+      0.6);
+  /* 평소에 덮일 검은색 반투명 정도 (숫자가 클수록 어두워짐) */
   z-index: 2;
   opacity: 1;
-  transition: opacity 0.3s ease; /* 어두운 효과가 부드럽게 사라지는 애니메이션 */
-  pointer-events: none; /* 클릭 이벤트가 하위 요소에 정상 전달되도록 처리 */
+  transition: opacity 0.3s ease;
+  /* 어두운 효과가 부드럽게 사라지는 애니메이션 */
+  pointer-events: none;
+  /* 클릭 이벤트가 하위 요소에 정상 전달되도록 처리 */
 }
 
 /* 3. 마우스를 올렸을 때(hover) 검은색 반투명 레이어 없애기 */
 .portfolio-list-card:hover::before {
-  opacity: 0; /* 검은색 오버레이 투명화 */
+  opacity: 0;
+  /* 검은색 오버레이 투명화 */
 }
 
 /* 4. (선택사항) 마우스 올렸을 때 이미지 살짝 확대 효과 추가 */
@@ -5192,14 +5230,16 @@ footer,
 
 .portfolio-list-card:hover .portfolio-card-logo,
 .portfolio-list-card:hover .portfolio-placeholder {
-  transform: scale(1.05); /* 마우스 올렸을 때 이미지가 5% 확대됨 */
+  transform: scale(1.05);
+  /* 마우스 올렸을 때 이미지가 5% 확대됨 */
 }
 
 /* 1. 챗봇 버튼 (화면 가장 하단 고정) */
 .chatbot-btn {
   position: fixed !important;
   right: 2rem !important;
-  bottom: 2rem !important; /* 화면 맨 아래에 위치 */
+  bottom: 2rem !important;
+  /* 화면 맨 아래에 위치 */
   z-index: 998 !important;
 }
 
@@ -5207,7 +5247,8 @@ footer,
 .scroll-top-btn {
   position: fixed !important;
   right: 2rem !important;
-  bottom: 6.75rem !important; /* 챗봇 버튼 위쪽으로 배치 */
+  bottom: 6.75rem !important;
+  /* 챗봇 버튼 위쪽으로 배치 */
   z-index: 999 !important;
 }
 
@@ -5222,8 +5263,10 @@ footer,
 /* 개인정보 동의 라벨 및 체크박스 수평 수직 중앙 정렬 */
 .request-checkbox {
   display: inline-flex !important;
-  align-items: center !important; /* 📍 세로 중앙 정렬 */
-  gap: 8px !important; /* 텍스트와 체크박스 사이 간격 */
+  align-items: center !important;
+  /* 📍 세로 중앙 정렬 */
+  gap: 8px !important;
+  /* 텍스트와 체크박스 사이 간격 */
   vertical-align: middle !important;
 }
 
@@ -5231,21 +5274,7 @@ footer,
 #request-privacy {
   margin: 0 !important;
   position: relative !important;
-  top: 2px !important; /* 📍 수평 위치 맞춤 (필요시 0px~2px 사이 조정) */
+  top: 2px !important;
+  /* 📍 수평 위치 맞춤 (필요시 0px~2px 사이 조정) */
   cursor: pointer;
-}
-
-/* 포트폴리오 페이지 상단 'Portfolio' 제목 오른쪽 이동 */
-.portfolio-title-block h1,
-.portfolio-page-shell .portfolio-title-block {
-  margin-left: 18px !important; /* 📍 원하시는 만큼 숫자를 늘려주세요 (예: 20px, 40px, 60px 등) */
-}
-
-/* PC 화면(너비 901px 이상)에서만 로그아웃/회원탈퇴 버튼 위로 이동 */
-@media (min-width: 901px) {
-  #btn-mypage-logout,
-  #btn-mypage-withdraw {
-    position: relative !important;
-    top: -20px !important; /* 📍 PC에서 올리고 싶은 만큼 수치 조절 (-10px ~ -30px) */
-  }
 }
