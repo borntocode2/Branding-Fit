@@ -246,9 +246,11 @@ p {
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(180deg,
-      var(--bg-main) 0%,
-      var(--bg-surface) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--bg-main) 0%,
+    var(--bg-surface) 100%
+  );
 }
 
 .section-title {
@@ -519,10 +521,12 @@ p {
   font-family: var(--font-title);
   font-size: 3.2rem;
   font-weight: 800;
-  background: linear-gradient(135deg,
-      var(--primary-03),
-      var(--primary-01),
-      var(--accent-pink));
+  background: linear-gradient(
+    135deg,
+    var(--primary-03),
+    var(--primary-01),
+    var(--accent-pink)
+  );
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -561,7 +565,6 @@ p {
 
 /* Responsive Styles for Steps */
 @media (max-width: 768px) {
-
   .step-card,
   .step-card.reverse {
     flex-direction: column;
@@ -784,10 +787,12 @@ footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(90deg,
-      rgba(5, 8, 13, 0.34),
-      rgba(5, 8, 13, 0.1) 46%,
-      rgba(10, 10, 12, 0.42));
+  background: linear-gradient(
+    90deg,
+    rgba(5, 8, 13, 0.34),
+    rgba(5, 8, 13, 0.1) 46%,
+    rgba(10, 10, 12, 0.42)
+  );
   pointer-events: none;
 }
 
@@ -859,7 +864,7 @@ footer {
   -webkit-backdrop-filter: blur(12px);
 }
 
-.login-modal-panel>* {
+.login-modal-panel > * {
   position: relative;
   z-index: 1;
 }
@@ -1137,9 +1142,11 @@ footer {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg,
-      var(--text-primary),
-      var(--text-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--text-primary),
+    var(--text-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1211,7 +1218,7 @@ select.form-control option {
 
 select.form-control option:hover,
 select.form-control option:checked {
-  background-color: #4F46E5;
+  background-color: #4f46e5;
   color: #ffffff;
 }
 
@@ -1248,9 +1255,11 @@ select.form-control optgroup {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: linear-gradient(135deg,
-      rgba(99, 102, 241, 0.2),
-      rgba(139, 92, 246, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.2),
+    rgba(139, 92, 246, 0.2)
+  );
   border: 1px solid rgba(139, 92, 246, 0.3);
   padding: 0.3rem 0.7rem;
   border-radius: 100px;
@@ -1578,9 +1587,11 @@ select.form-control optgroup {
 
 .chatbot-header {
   padding: 1rem 1.2rem;
-  background: linear-gradient(135deg,
-      rgba(99, 102, 241, 0.15),
-      rgba(79, 70, 229, 0.15));
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.15),
+    rgba(79, 70, 229, 0.15)
+  );
   border-bottom: 1px solid var(--border-glass);
   display: flex;
   justify-content: space-between;
@@ -1766,7 +1777,6 @@ select.form-control optgroup {
 }
 
 @keyframes typingPulse {
-
   0%,
   100% {
     transform: translateY(0);
@@ -2110,7 +2120,7 @@ select.form-control optgroup {
     grid-template-columns: 1fr;
   }
 
-  .legal-table>div {
+  .legal-table > div {
     grid-template-columns: 1fr;
     gap: 8px;
   }
@@ -2234,8 +2244,8 @@ body.home-route {
   display: block;
 }
 
-body.home-route>header,
-body.home-route>#app-footer {
+body.home-route > header,
+body.home-route > #app-footer {
   display: none;
 }
 
@@ -2275,7 +2285,7 @@ body.mypage-route {
   background: #121212;
 }
 
-body.mypage-route>header {
+body.mypage-route > header {
   background: transparent !important;
   border-bottom: 0;
   box-shadow: none;
@@ -2283,7 +2293,7 @@ body.mypage-route>header {
   -webkit-backdrop-filter: none;
 }
 
-body:not(.home-route)>header {
+body:not(.home-route) > header {
   position: fixed;
   top: 0;
   left: 0;
@@ -2541,12 +2551,16 @@ body:not(.home-route) .btn-start.active:hover {
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(circle at 28% 22%,
+    radial-gradient(
+      circle at 28% 22%,
       color-mix(in srgb, var(--tile-accent) 16%, transparent),
-      transparent 34%),
-    linear-gradient(135deg,
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
       var(--tile-bg),
-      color-mix(in srgb, var(--tile-bg) 84%, #ffffff));
+      color-mix(in srgb, var(--tile-bg) 84%, #ffffff)
+    );
   transition:
     transform 0.25s ease,
     filter 0.25s ease;
@@ -2614,9 +2628,11 @@ body.portfolio-modal-open {
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr);
   grid-template-rows: 120px minmax(0, 1fr);
-  background: linear-gradient(135deg,
-      rgba(72, 70, 68, 0.58),
-      rgba(45, 43, 42, 0.42));
+  background: linear-gradient(
+    135deg,
+    rgba(72, 70, 68, 0.58),
+    rgba(45, 43, 42, 0.42)
+  );
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-bottom: 0;
   border-radius: 28px 28px 0 0;
@@ -2961,7 +2977,7 @@ body.portfolio-modal-open {
   color: rgba(255, 255, 255, 0.88);
 }
 
-.brand-detail-portfolio-modal .portfolio-story-panel>p:first-child {
+.brand-detail-portfolio-modal .portfolio-story-panel > p:first-child {
   margin: 0 0 18px;
   color: rgba(188, 182, 255, 0.94);
   font-size: 15px;
@@ -3770,7 +3786,7 @@ body.portfolio-modal-open {
 }
 
 @media (max-width: 767px) {
-  body:not(.home-route)>header {
+  body:not(.home-route) > header {
     height: 64px;
   }
 
@@ -3914,7 +3930,7 @@ body.portfolio-modal-open {
   letter-spacing: 0;
 }
 
-.legal-hero>p:not(.public-eyebrow) {
+.legal-hero > p:not(.public-eyebrow) {
   max-width: 760px;
   color: rgba(255, 255, 255, 0.72);
   font-size: clamp(17px, 1.5vw, 22px);
@@ -4007,7 +4023,7 @@ body.portfolio-modal-open {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.legal-table>div {
+.legal-table > div {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
   gap: 24px;
@@ -4071,16 +4087,20 @@ body.portfolio-modal-open {
   display: grid;
   place-items: center;
   background:
-    linear-gradient(45deg,
+    linear-gradient(
+      45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%),
-    linear-gradient(45deg,
+      rgba(255, 255, 255, 0.9) 75%
+    ),
+    linear-gradient(
+      45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%),
+      rgba(255, 255, 255, 0.9) 75%
+    ),
     #e8e8e8;
   background-position:
     0 0,
@@ -4361,9 +4381,11 @@ body.portfolio-modal-open {
 .mypage-divider {
   height: 2px;
   margin: 48px 0 58px;
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0.86),
-      rgba(255, 255, 255, 0.08));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0.08)
+  );
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -4406,10 +4428,7 @@ body.portfolio-modal-open {
   border: 1px solid var(--border-glass);
   /* 유리 질감 테두리 */
   border-radius: 16px;
-  background: rgba(18,
-      18,
-      30,
-      0.6);
+  background: rgba(18, 18, 30, 0.6);
   /* 생성된 브랜드 카드와 동일한 어두운 배경톤 */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   padding: 28px 32px;
@@ -4431,10 +4450,7 @@ body.portfolio-modal-open {
   overflow-y: auto;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  background: rgba(0,
-      0,
-      0,
-      0.25);
+  background: rgba(0, 0, 0, 0.25);
   /* 어두운 카드 안쪽에 대화상자처럼 묻어나는 투명 어둠 처리 */
   padding: 18px;
   color: var(--text-primary);
@@ -4467,16 +4483,20 @@ body.portfolio-modal-open {
   height: 96px;
   border-radius: 12px;
   background:
-    linear-gradient(45deg,
+    linear-gradient(
+      45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%),
-    linear-gradient(45deg,
+      rgba(255, 255, 255, 0.9) 75%
+    ),
+    linear-gradient(
+      45deg,
       rgba(255, 255, 255, 0.9) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.9) 75%),
+      rgba(255, 255, 255, 0.9) 75%
+    ),
     #e9e9e9;
   background-position:
     0 0,
@@ -4614,10 +4634,12 @@ body.portfolio-modal-open {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 50%,
+    radial-gradient(
+      circle at 50% 50%,
       rgba(236, 72, 153, 0.18) 0%,
       rgba(79, 70, 229, 0.16) 45%,
-      transparent 78%),
+      transparent 78%
+    ),
     rgba(10, 10, 12, 0.38);
 }
 
@@ -4690,7 +4712,6 @@ body.portfolio-modal-open {
 }
 
 @media (max-width: 640px) {
-
   .mypage-avatar,
   .mypage-avatar-wrap {
     width: 128px;
@@ -4816,7 +4837,7 @@ body.legal-route {
   background: #0a0a0a;
 }
 
-body.legal-route>header {
+body.legal-route > header {
   position: static;
   height: 80px;
   background: #0a0a0a;
@@ -4842,7 +4863,7 @@ body.legal-route .gnb {
 }
 
 @media (max-width: 767px) {
-  body.legal-route>header {
+  body.legal-route > header {
     height: 64px;
   }
 
@@ -4856,7 +4877,7 @@ body.legal-route .gnb {
 }
 
 /* Final legal-page overrides: break global header rules and keep the rail in the document flow. */
-body.legal-route:not(.home-route)>header {
+body.legal-route:not(.home-route) > header {
   position: relative;
   top: auto;
   left: auto;
@@ -4918,7 +4939,7 @@ body.legal-route .legal-shell {
 }
 
 @media (max-width: 767px) {
-  body.legal-route:not(.home-route)>header {
+  body.legal-route:not(.home-route) > header {
     height: 64px;
   }
 
@@ -5008,7 +5029,6 @@ footer,
 
 /* 모바일/태블릿 반응형 */
 @media (max-width: 900px) {
-
   footer,
   #app-footer {
     min-height: auto;
@@ -5021,7 +5041,6 @@ footer,
 }
 
 @media (max-width: 640px) {
-
   footer,
   #app-footer {
     flex-direction: column;
@@ -5160,7 +5179,6 @@ footer,
 
 /* 반응형 모바일 예외 처리 */
 @media (max-width: 1024px) {
-
   footer,
   #app-footer,
   .site-footer {
@@ -5174,7 +5192,6 @@ footer,
 }
 
 @media (max-width: 768px) {
-
   footer,
   #app-footer,
   .site-footer {
@@ -5203,10 +5220,7 @@ footer,
   position: absolute;
   inset: 0;
   /* top: 0, right: 0, bottom: 0, left: 0 전체 채움 */
-  background-color: rgba(0,
-      0,
-      0,
-      0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   /* 평소에 덮일 검은색 반투명 정도 (숫자가 클수록 어두워짐) */
   z-index: 2;
   opacity: 1;
@@ -5277,4 +5291,157 @@ footer,
   top: 2px !important;
   /* 📍 수평 위치 맞춤 (필요시 0px~2px 사이 조정) */
   cursor: pointer;
+}
+
+/* 포트폴리오 상단 동영상 배경 스타일 */
+.portfolio-hero-video-wrapper {
+  position: relative;
+  width: 100vw; /* 브라우저 좌우 끝까지 꽉 채움 */
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); /* 부모 컨테이너 여백 무시하고 전체 화면 폭으로 확장 */
+  height: 600px; /* 동영상 배경 높이 (원하시는 높이로 조절 가능) */
+  overflow: hidden;
+  background-color: #000;
+}
+
+.portfolio-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 동영상 비율을 유지하며 화면에 빈틈없이 꽉 채움 */
+  pointer-events: none; /* 동영상 클릭 방지 */
+}
+
+/* 동영상 위 어두운 오버레이 및 텍스트 정렬 */
+.portfolio-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* 동영상 위를 살짝 어둡게 처리하여 글자 가독성 확보 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.portfolio-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.portfolio-hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 상단 헤더/네비바를 영상 위에 겹치도록 설정 (마이페이지/포트폴리오 등) */
+#app-header,
+.site-header {
+  position: relative;
+  z-index: 100; /* 동영상보다 위에 뜨도록 설정 */
+  background: transparent !important; /* 헤더 배경을 투명하게 설정 */
+}
+
+/* 포트폴리오 상단 동영상 영역을 네비바 높이만큼 위로 상향 이동 */
+.portfolio-hero-video-wrapper {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* 📍 네비게이션 바 높이(보통 80px)만큼 위로 올림 */
+  margin-top: -80px !important;
+
+  /* 📍 네비바 뒤로 들어가는 만큼 전체 높이도 80px 추가 조절 */
+  height: 680px !important;
+
+  overflow: hidden;
+  background-color: #000;
+  z-index: 1; /* 헤더(100)보다 아래에 위치 */
+}
+
+/* 포트폴리오 제목 위치를 위로 이동 */
+#view-portfolio .portfolio-title-block,
+#view-portfolio .portfolio-hero-title,
+.portfolio-page-view h1 {
+  position: relative !important;
+
+  /* 📍 수치를 더 큰 음수로 바꿀수록 위로 더 많이 올라갑니다 (예: -40px, -80px) */
+  margin-top: -300px !important;
+
+  /* 📍 오른쪽으로 이동 (숫자가 크면 오른쪽으로 이동함) */
+  margin-left: 25px !important;
+
+  /* 위로 올렸을 때 다른 요소 뒤로 가려지지 않도록 z-index 부여 */
+  z-index: 10 !important;
+}
+
+/* 📍 모바일 화면(900px 이하) 전용 레이아웃 정상화 */
+@media (max-width: 900px) {
+  /* 1. 모바일에서 제목이 목록을 가리지 않도록 위치 정상화 */
+  #view-portfolio .portfolio-title-block,
+  #view-portfolio .portfolio-hero-title,
+  .portfolio-page-view h1 {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  /* 2. 모바일 상단 동영상 높이 적절히 축소 */
+  .portfolio-hero-video-wrapper {
+    margin-top: 0 !important;
+    height: 250px !important; /* 모바일 화면에 맞는 깔끔한 높이 */
+  }
+
+  /* 3. 위로 끌려 올라간 카테고리 필터 및 포트폴리오 카드 목록 위치 복원 */
+  .portfolio-filter-bar,
+  .portfolio-grid,
+  .portfolio-list-section {
+    position: relative !important;
+    z-index: 5 !important;
+    margin-top: 20px !important;
+  }
+}
+
+/* 모바일 전용: 의뢰하기 섹션 강제 중앙 정렬 */
+@media (max-width: 900px) {
+  /* 의뢰하기 버튼을 포함하는 모바일 세션 감싸는 박스 전체 */
+  section:has(a[href*="request"]),
+  section:has(button[onclick*="request"]),
+  section:has(.btn-request),
+  div:has(a[href*="request"]) {
+    text-align: center !important;
+  }
+
+  /* 내부 텍스트, 타이틀, 버튼 강제 중앙 배치 */
+  section:has(a[href*="request"]) *,
+  section:has(button[onclick*="request"]) *,
+  section:has(.btn-request) * {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+    justify-content: center !important;
+  }
+
+  /* 의뢰하기 버튼 자체를 블록 중앙 정렬 */
+  a[href*="request"],
+  button[onclick*="request"],
+  .btn-request {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 20px auto 0 auto !important;
+  }
 }
