@@ -5445,3 +5445,40 @@ footer,
     margin: 20px auto 0 auto !important;
   }
 }
+
+/* 모바일 화면(900px 이하) 로그인 모달창 배경 투명도 조절 */
+@media (max-width: 900px) {
+  /* 1. 모달 팝업 바깥쪽 전체 배경 (동영상이 더 비치게 반투명화) */
+  .modal-overlay {
+    background: rgba(
+      8,
+      11,
+      16,
+      0.25
+    ) !important; /* 📍 기존 0.6 -> 0.3으로 줄여 뒷배경 비침 강조 */
+    backdrop-filter: blur(
+      5px
+    ) !important; /* 블러(흐림) 정도도 살짝 줄여 동영상이 잘 보이게 설정 */
+  }
+
+  /* 2. 로그인 모달 카드 자체 검은색 배경톤 투명도 조절 */
+  .login-modal-card {
+    background: rgba(
+      10,
+      10,
+      12,
+      0.25
+    ) !important; /* 📍 기존 0.48 -> 0.25로 조절 */
+  }
+
+  /* 3. 모바일용 로그인 입력 패널 배경톤 투명도 조절 */
+  .login-modal-panel {
+    background: rgba(
+      14,
+      14,
+      15,
+      0.6
+    ) !important; /* 📍 기존 0.98 -> 0.6으로 조절하여 뒤 동영상 비침 */
+    backdrop-filter: blur(8px) !important;
+  }
+}
