@@ -5482,3 +5482,53 @@ footer,
     backdrop-filter: blur(8px) !important;
   }
 }
+
+/* 포트폴리오 상세 모달: 이미지 및 하단 문구 중앙 정렬 */
+
+/* 1. 상단 대표 로고 이미지 영역 가운데 정렬 */
+.portfolio-logo-blank {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transform: none !important; /* 기존 좌측 오프셋(translateX) 제거하여 정확히 중앙 배치 */
+}
+
+/* 2. 메인/디자인 시스템 섹션 중앙 정렬 */
+.portfolio-detail-section {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transform: none !important;
+}
+
+/* 3. 패키지 목업 이미지 목록 및 이미지 중앙 정렬 */
+.portfolio-mockup-list {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* 이미지들을 가운데 정렬 */
+  width: 100% !important;
+}
+
+.portfolio-mockup-image {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  object-fit: cover !important;
+}
+
+/* 4. 최하단 Branding Fit 소개 문구 섹션 완벽 중앙 정렬 */
+.portfolio-detail-closing {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transform: none !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.portfolio-detail-closing h3,
+.portfolio-detail-closing p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
