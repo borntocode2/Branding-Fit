@@ -5532,3 +5532,56 @@ footer,
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+/* 📍 모바일 화면(900px 이하): 포트폴리오 페이지 헤더 투명화 & 동영상 위 제목 오버레이 */
+@media (max-width: 900px) {
+  /* 1. 포트폴리오 페이지 진입 시 네비게이션 헤더 배경 투명화 및 동영상 위 배치 */
+  body.portfolio-route > header,
+  body.portfolio-route .gnb {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 100 !important;
+  }
+
+  /* 2. 상단 동영상 박스가 네비바 뒤까지 들어가도록 위로 상향 이동 및 높이 확보 */
+  .portfolio-page-view .portfolio-hero-video-wrapper {
+    margin-top: -64px !important; /* 모바일 헤더 높이(64px)만큼 위로 끌어올림 */
+    height: 360px !important; /* 동영상 배경 세로 높이 확대 */
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* 3. 'Portfolio' 제목을 동영상 배경 안쪽(오버레이)으로 밀어 올리기 */
+  #view-portfolio .portfolio-title-block,
+  #view-portfolio .portfolio-hero-title,
+  .portfolio-page-view h1 {
+    position: relative !important;
+    margin-top: -50px !important; /* 📍 수치가 더 커질수록(-200px 등) 동영상 위쪽으로 올라갑니다 */
+    margin-left: 0px !important; /* 살짝 우측 여백 부여 */
+    z-index: 10 !important;
+    color: #ffffff !important;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important; /* 동영상 위 글자 가독성 확보 */
+  }
+
+  /* 4. 카테고리 필터 목록 위쪽 여백 축소 (동영상 아래로 바짝 붙이기) */
+  @media (max-width: 900px) {
+    .portfolio-filter-bar {
+      position: relative !important;
+      z-index: 5 !important;
+
+      /* 📍 기존 100px -> 25px로 대폭 줄여 위쪽 여백을 바짝 붙입니다 */
+      margin-top: -130px !important;
+
+      /* 아래 포트폴리오 목록 카드들과의 간격 */
+      margin-bottom: 25px !important;
+      padding: 0 20px !important;
+      padding-left: 3px !important;
+    }
+  }
+}
