@@ -1175,11 +1175,15 @@
           margin-bottom: 14px;
         }
         .hero-title {
-          width: min(350px, 100%);
+          width: calc(100vw - 24px);
           margin: 0 auto 16px;
-          font-size: 28px;
+          font-size: 26px;
           line-height: 1.18;
           text-align: center;
+        }
+        .hero-title-line {
+          display: block;
+          white-space: nowrap;
         }
         .hero-subtitle {
           width: min(320px, 100%);
@@ -1386,7 +1390,8 @@
       <div class="hero-content">
         <div class="hero-badge">✨ AI 기반 차세대 브랜딩 엔진</div>
         <h1 class="hero-title">
-          상상이 현실이 되는 곳,<br />당신의 브랜드를 디자인해 보세요.
+          <span class="hero-title-line">상상이 현실이 되는 곳,</span>
+          <span class="hero-title-line">당신의 브랜드를 디자인해 보세요.</span>
         </h1>
         <p class="hero-subtitle">
           AI를 통해 로고, 슬로건, 브랜드 컬러부터 가이드북까지 한번에

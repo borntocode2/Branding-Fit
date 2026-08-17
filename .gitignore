@@ -15,6 +15,7 @@ client_secret_*.json
 # 2. Dependency Directories (Node.js 패키지 모듈 디렉토리)
 node_modules/
 jspm_packages/
+.npm-cache/
 
 # 3. Database Files & Logs (SQLite 데이터베이스 및 로그 파일)
 data/*.db
