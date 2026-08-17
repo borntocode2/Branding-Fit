@@ -2860,9 +2860,10 @@ body.portfolio-modal-open {
 
 .portfolio-logo-blank img {
   width: 100%;
-  height: 100%;
-  min-height: 500px;
-  object-fit: cover;
+  height: auto;
+  max-height: min(62vh, 560px);
+  min-height: 0;
+  object-fit: contain;
   display: block;
 }
 
@@ -2936,9 +2937,10 @@ body.portfolio-modal-open {
 
 .portfolio-mockup-image {
   width: 100%;
-  min-height: 460px;
+  height: auto;
+  min-height: 0;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   background: #e9e7df;
 }
 
@@ -4712,23 +4714,102 @@ body.portfolio-modal-open {
 }
 
 @media (max-width: 640px) {
+  .mypage-shell {
+    width: 100%;
+  }
+
+  .mypage-profile-panel {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 36px;
+    padding: 48px 28px 40px;
+    text-align: center;
+  }
+
+  .mypage-profile-top {
+    width: min(100%, 340px);
+    align-items: center;
+    gap: 18px;
+  }
+
   .mypage-avatar,
   .mypage-avatar-wrap {
-    width: 128px;
+    width: 136px;
   }
 
   .mypage-avatar {
-    height: 128px;
-    font-size: 32px;
+    height: 136px;
+    margin: 0 auto 18px;
+    font-size: 34px;
   }
 
   .mypage-avatar-wrap {
-    height: 146px;
+    height: 154px;
+    margin: 0 auto;
   }
 
   .mypage-nickname-view {
     align-items: center;
     text-align: center;
+  }
+
+  .mypage-profile-panel h2 {
+    font-size: 26px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .mypage-profile-edit-toggle {
+    height: 34px;
+    min-width: 74px;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+
+  .mypage-profile-panel p {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .mypage-email {
+    font-size: 14px !important;
+  }
+
+  .mypage-tabs {
+    width: min(100%, 340px);
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .mypage-tab {
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .mypage-profile-panel .mypage-account-actions {
+    width: min(100%, 308px);
+    align-items: center;
+    gap: 16px;
+    margin: 18px auto 0;
+  }
+
+  .mypage-profile-panel .mypage-account-actions .mypage-outline-btn {
+    min-height: 64px;
+    border-radius: 14px;
+    font-size: 18px;
+  }
+
+  .mypage-content-panel {
+    text-align: center;
+  }
+
+  .mypage-content-head p:not(.public-eyebrow) {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .mypage-request-main,
@@ -5196,14 +5277,24 @@ footer,
   #app-footer,
   .site-footer {
     flex-direction: column;
-    gap: 48px;
+    gap: 58px;
     padding: 48px 24px;
+  }
+
+  .footer-left,
+  .site-footer-brand {
+    gap: 30px;
   }
 
   .footer-right,
   .site-footer-links {
     flex-direction: column;
-    gap: 36px;
+    gap: 44px;
+  }
+
+  .footer-contact,
+  .site-footer address {
+    padding-top: 4px;
   }
 }
 
@@ -5510,7 +5601,9 @@ footer,
 .portfolio-mockup-image {
   margin-left: auto !important;
   margin-right: auto !important;
-  object-fit: cover !important;
+  height: auto !important;
+  min-height: 0 !important;
+  object-fit: contain !important;
 }
 
 /* 4. 최하단 Branding Fit 소개 문구 섹션 완벽 중앙 정렬 */

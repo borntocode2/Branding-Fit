@@ -1120,24 +1120,118 @@
         }
         nav {
           height: 68px;
+          padding: 0 10px;
+          gap: 8px;
+        }
+        .nav-logo {
+          flex: 0 0 auto;
+          font-size: 16px;
+          line-height: 1;
+          white-space: nowrap;
+        }
+        .nav-menu {
+          flex: 0 1 auto;
+          min-width: 0;
+          gap: 8px;
         }
         .nav-links {
-          display: none;
+          display: flex;
+          flex: 0 1 auto;
+          min-width: 0;
+          gap: 8px;
         }
         .nav-auth {
-          gap: 10px;
+          flex: 0 0 auto;
+          gap: 6px;
+        }
+        .nav-links a,
+        .nav-auth a {
+          height: 32px;
+          font-size: 11px;
+          line-height: 1;
+          white-space: nowrap;
         }
         .nav-auth button {
-          display: none;
+          display: inline-flex;
+          height: 30px;
+          padding: 0 8px;
+          border-radius: 15px;
+          font-size: 11px;
+          white-space: nowrap;
+        }
+        .hero-section {
+          justify-content: center;
+          padding: 82px 18px 48px;
+          text-align: center;
+        }
+        .hero-content {
+          width: 100%;
+          align-items: center;
+          text-align: center;
+        }
+        .hero-badge {
+          justify-content: center;
+          font-size: 13px;
+          margin-bottom: 14px;
         }
         .hero-title {
+          width: calc(100vw - 24px);
+          margin: 0 auto 16px;
+          font-size: 26px;
           line-height: 1.18;
+          text-align: center;
+        }
+        .hero-title-line {
+          display: block;
+          white-space: nowrap;
+        }
+        .hero-subtitle {
+          width: min(320px, 100%);
+          margin: 0 auto 34px;
+          font-size: 13px;
+          line-height: 1.55;
+          text-align: center;
         }
         .input-box-wrapper {
-          width: calc(100vw - 36px);
+          width: min(340px, calc(100vw - 36px));
+          min-height: 108px;
+        }
+        .input-box-inner {
+          min-height: 108px;
+          padding: 16px 18px;
+          gap: 14px;
+          align-items: stretch;
+        }
+        .input-main-row {
+          justify-content: center;
         }
         .input-main-row input {
-          width: calc(100% - 52px);
+          width: calc(100% - 46px);
+          font-size: 13px;
+          text-align: center;
+        }
+        .input-sub-row {
+          justify-content: center;
+          gap: 10px;
+        }
+        .input-left-group,
+        .keyword-area,
+        .keyword-tags-wrapper {
+          justify-content: center;
+        }
+        .dropdown-btn,
+        .keyword-toggle-btn,
+        .custom-industry-input,
+        .keyword-input-box {
+          font-size: 12px;
+        }
+        .submit-btn {
+          width: 34px;
+          height: 34px;
+        }
+        .submit-btn svg {
+          width: 15px;
+          height: 15px;
         }
         .portfolio-fixed-title {
           top: 88px;
@@ -1195,19 +1289,69 @@
         .intro-sub-desc {
           font-size: 16px;
         }
-        .cta-title {
+        .intro-main-title,
+        .intro-main-title-end,
+        .portfolio-intro-title,
+        .portfolio-intro-title-end {
           width: min(520px, calc(100% - 36px));
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 26px;
+          line-height: 1.35;
+          text-align: center;
+        }
+        .intro-sub-desc,
+        .portfolio-intro-sub {
+          width: min(520px, calc(100% - 36px));
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 13px;
+          line-height: 1.55;
+          text-align: center;
+        }
+        .intro-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 12px 20px;
+          font-size: 15px;
+        }
+        .cta-title {
+          width: calc(100vw - 36px);
+          max-width: 354px;
+          margin: 0 auto 22px;
+          font-size: 26px;
+          line-height: 1.35;
+          text-align: center;
+        }
+        .cta-title-line {
+          display: block;
+          width: 100%;
+          white-space: nowrap;
+        }
+        .cta-button {
+          width: 150px;
+          height: 46px;
+          font-size: 15px;
         }
         footer {
           flex-direction: column;
           padding: 64px 24px;
+          gap: 58px;
         }
         .footer-left {
-          gap: 48px;
+          width: 100%;
+          gap: 30px;
         }
         .footer-right {
           flex-direction: column;
-          gap: 36px;
+          width: 100%;
+          gap: 44px;
+        }
+        .footer-contact {
+          padding-top: 4px;
         }
       }
     </style>
@@ -1246,7 +1390,8 @@
       <div class="hero-content">
         <div class="hero-badge">✨ AI 기반 차세대 브랜딩 엔진</div>
         <h1 class="hero-title">
-          상상이 현실이 되는 곳,<br />당신의 브랜드를 디자인해 보세요.
+          <span class="hero-title-line">상상이 현실이 되는 곳,</span>
+          <span class="hero-title-line">당신의 브랜드를 디자인해 보세요.</span>
         </h1>
         <p class="hero-subtitle">
           AI를 통해 로고, 슬로건, 브랜드 컬러부터 가이드북까지 한번에
@@ -1933,7 +2078,8 @@
       </div>
       <div class="cta-content">
         <h2 class="cta-title">
-          생성된 브랜드를<br />더욱 멋지게 만들어보세요.
+          <span class="cta-title-line">생성된 브랜드를</span>
+          <span class="cta-title-line">더욱 멋지게 만들어보세요.</span>
         </h2>
         <button type="button" class="cta-button">디자인 의뢰하기</button>
       </div>
